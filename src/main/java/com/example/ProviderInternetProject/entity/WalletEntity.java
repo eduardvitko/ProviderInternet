@@ -16,7 +16,11 @@ public class WalletEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
+
+    @Column(name = "number")
     private String number;
+
+    @Column(name = "balance")
     private int balance;
 
 }

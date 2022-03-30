@@ -16,9 +16,20 @@ public class LimitEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "amount")
     private int amount;
+
+
+    @Column(name = "isActive")
     private boolean isActive;
+
+    @Column(name = "created")
     private LocalDateTime created;
+
+    @Column(name = "updated")
     private LocalDateTime updated;
 }

@@ -18,15 +18,27 @@ public class TariffEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
+
+    @Column(name = "name")
     private String name;
 
     @Enumerated(EnumType.STRING)
     private ServiceType type;
-    @OneToMany
+
+    @OneToMany(fetch = FetchType.EAGER)
+    @JoinColumn(name = "limits_id")
     private List<LimitEntity> limitsList;
+
+    @Column(name = "pricePerDay")
     private int pricePerDay;
+
+    @Column(name = "isActive")
     private boolean isActive;
+
+    @Column(name = "created")
     private LocalDateTime created;
+
+    @Column(name = "updated")
     private LocalDateTime updated;
 
 }

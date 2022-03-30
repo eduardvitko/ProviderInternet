@@ -23,13 +23,13 @@ public class CustomerEntity {
 @Column(name = "name")
     private String name;
 
-
+    @Column(name = "surname")
     private String surname;
 
-
+    @Column(name = "phone_number")
     private String phone_number;
 
-
+    @Column(name = "email")
     private String email;
 
     @OneToMany(fetch = FetchType.EAGER)
@@ -40,13 +40,13 @@ public class CustomerEntity {
     @JoinColumn(name = "wallet_id")
     private WalletEntity wallet;
 
-
+    @Column(name = "isActive")
     private boolean isActive;
 
-
+    @Column(name = "created")
     private LocalDateTime created;
 
-
+    @Column(name = "updated")
     private LocalDateTime updated;
 
 
